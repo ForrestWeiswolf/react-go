@@ -31,4 +31,14 @@ describe('Board', () => {
 
     expect(cells[18]).toHaveClass('white-stone');
   });
+
+  it('Does not empty one cell when filling the next', () => {
+    render(<Board />);
+    const cells = screen.queryAllByRole('cell');
+
+    fireEvent.click(cells[12]);
+    fireEvent.click(cells[13]);
+
+    expect(cells[12]).toHaveClass('black-stone');
+  })
 });

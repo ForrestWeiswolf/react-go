@@ -11,7 +11,7 @@ function Board() {
 
   const setCellState = (rowIdx, colIdx, value) => {
     const newState = [...state];
-    newState[rowIdx] = [...state[colIdx]];
+    newState[rowIdx] = [...state[rowIdx]];
     newState[rowIdx][colIdx] = value;
 
     setState(newState);
