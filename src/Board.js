@@ -7,6 +7,7 @@ function Board() {
     () => [...new Array(size)].map(() => null)
   );
   const [state, setState] = useState(initialState);
+  const [color, setColor] = useState('black');
 
   const setCellState = (rowIdx, colIdx, value) => {
     const newState = [...state];
@@ -25,7 +26,10 @@ function Board() {
               {rowState.map((cellState, colIdx) =>
                 <td
                   key={colIdx}
-                  onClick={() => setCellState(rowIdx, colIdx, 'black-stone')}
+                  onClick={() => {
+                    setCellState(rowIdx, colIdx, `${color}-stone`)
+                    setColor(color === 'black' ? 'white' : 'black')
+                  }}
                   className={cellState}
                 >.</td>
               )}

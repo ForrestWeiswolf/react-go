@@ -19,6 +19,16 @@ describe('Board', () => {
 
     fireEvent.click(cells[12]);
 
-    expect(cells[12]).toHaveClass('black-stone')
-  })
-})
+    expect(cells[12]).toHaveClass('black-stone');
+  });
+
+  it('When two cells are clicked, the second one is filled in white', () => {
+    render(<Board />);
+    const cells = screen.queryAllByRole('cell');
+
+    fireEvent.click(cells[12]);
+    fireEvent.click(cells[18]);
+
+    expect(cells[18]).toHaveClass('white-stone');
+  });
+});
