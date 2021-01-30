@@ -31,7 +31,7 @@ function Board() {
                     setColor(color === 'black' ? 'white' : 'black')
                   }}
                   className={cellState}
-                >.</td>
+                ><div className={cellState ? "" : "dot"}/></td>
               )}
             </tr>
           )}

@@ -1,9 +1,12 @@
 table {
   background-color: lightgray;
 }
+
 td {
   width: 2em;
   height: 2em;
+  padding: 0;
+  margin: 0;
 }
 
 td.black-stone {
@@ -14,4 +17,11 @@ td.black-stone {
 td.white-stone {
   background-color: white;
   border-radius: 50%;
+}
+
+div.dot {
+  width: 1px;
+  height: 1px;
+  background-color: black;
+  margin: 1em;
 }
