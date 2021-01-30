@@ -1,3 +1,5 @@
+import './Board.css';
+
 function Board() {
   const state = Array(19).fill(
     Array(19).fill(null)
