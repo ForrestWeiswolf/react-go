@@ -40,5 +40,15 @@ describe('Board', () => {
     fireEvent.click(cells[13]);
 
     expect(cells[12]).toHaveClass('black stone');
-  })
+  });
+
+  it('Ignores clicks to a cell that is already full', () => {
+    render(<Board />);
+    const cells = screen.queryAllByRole('cell');
+
+    fireEvent.click(cells[12]);
+    fireEvent.click(cells[12]);
+
+    expect(cells[12]).toHaveClass('black stone');
+  });
 });

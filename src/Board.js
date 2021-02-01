@@ -27,8 +27,10 @@ function Board() {
                 <td
                   key={colIdx}
                   onClick={() => {
-                    setCellState(rowIdx, colIdx, `${color} stone`)
-                    setColor(color === 'black' ? 'white' : 'black')
+                    if(!cellState){
+                      setCellState(rowIdx, colIdx, `${color} stone`);
+                      setColor(color === 'black' ? 'white' : 'black');
+                    }
                   }}
                   className={cellState}
                 ><div className={cellState ? "" : "dot"}/></td>
