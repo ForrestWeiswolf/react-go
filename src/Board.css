@@ -9,12 +9,15 @@ td {
   margin: 0;
 }
 
-td.black-stone {
-  background-color: black;
+td.stone {
   border-radius: 50%;
 }
 
-td.white-stone {
+td.black {
+  background-color: black;
+}
+
+td.white {
   background-color: white;
   border-radius: 50%;
 }

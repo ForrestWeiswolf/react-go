@@ -27,7 +27,7 @@ function Board() {
                 <td
                   key={colIdx}
                   onClick={() => {
-                    setCellState(rowIdx, colIdx, `${color}-stone`)
+                    setCellState(rowIdx, colIdx, `${color} stone`)
                     setColor(color === 'black' ? 'white' : 'black')
                   }}
                   className={cellState}

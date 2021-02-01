@@ -19,7 +19,7 @@ describe('Board', () => {
 
     fireEvent.click(cells[12]);
 
-    expect(cells[12]).toHaveClass('black-stone');
+    expect(cells[12]).toHaveClass('black stone');
   });
 
   it('When two cells are clicked, the second one is filled in white', () => {
@@ -29,7 +29,7 @@ describe('Board', () => {
     fireEvent.click(cells[12]);
     fireEvent.click(cells[18]);
 
-    expect(cells[18]).toHaveClass('white-stone');
+    expect(cells[18]).toHaveClass('white stone');
   });
 
   it('Does not empty one cell when filling the next', () => {
@@ -39,6 +39,6 @@ describe('Board', () => {
     fireEvent.click(cells[12]);
     fireEvent.click(cells[13]);
 
-    expect(cells[12]).toHaveClass('black-stone');
+    expect(cells[12]).toHaveClass('black stone');
   })
 });
